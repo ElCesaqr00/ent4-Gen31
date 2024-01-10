@@ -7,11 +7,12 @@ import FormUser from './components/FormUser'
 function App() {
 
   const [infoUpdate, setInfoUpdate] = useState()
-  const [isDisable, setIsDisable] = useState(false)
+  const [isDisable, setIsDisable] = useState(true)
   
+  const url2 = "https://nodecrud-dev-kfsb.2.us-1.fl0.io";
   const url = "https://users-crud.academlo.tech"
   
-  const [users, getUsers, createUser, delUser, updateUser] = useCrud(url)
+  const [users, getUsers, createUser, delUser, updateUser] = useCrud(url2)
 
   useEffect(() => {
   getUsers("/users")
@@ -20,8 +21,7 @@ function App() {
     const handleOpen = () => {
       setIsDisable(false)
     }
-  console.log(users);
-  
+
   return (
     <><header className='header'>
       <h1>Users</h1>
