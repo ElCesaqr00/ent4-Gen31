@@ -9,10 +9,9 @@ function App() {
   const [infoUpdate, setInfoUpdate] = useState()
   const [isDisable, setIsDisable] = useState(true)
   
-  const url2 = "https://nodecrud-dev-kfsb.2.us-1.fl0.io";
-  const url = "https://users-crud.academlo.tech"
+  const url = "https://nodecrud-dev-kfsb.2.us-1.fl0.io";
   
-  const [users, getUsers, createUser, delUser, updateUser] = useCrud(url2)
+  const [users, getUsers, createUser, delUser, updateUser] = useCrud(url)
 
   useEffect(() => {
   getUsers("/users")
