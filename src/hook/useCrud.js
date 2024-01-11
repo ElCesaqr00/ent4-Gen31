@@ -34,7 +34,7 @@ const delApi = (path, id) => {
 //update 
 const updateApi = (path, id, data) => {
     const url = `${baseUrl}${path}/${id}/ `
-    axios.put(url, data)
+    axios.patch(url, data)
     .then(res => {console.log(res.data)
     setInfoApi(infoApi.map(e => e.id === id ? res.data : e))
     })
