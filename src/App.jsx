@@ -9,7 +9,7 @@ function App() {
   const [infoUpdate, setInfoUpdate] = useState()
   const [isDisable, setIsDisable] = useState(true)
   
-  const url = "https://nodecrud-desq.onrender.com/users";
+  const url = "https://nodecrud-desq.onrender.com";
   
   const [users, getUsers, createUser, delUser, updateUser] = useCrud(url)
 
